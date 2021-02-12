@@ -1,0 +1,27 @@
+.App {
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10% 85% 5%;
+}
+
+.App > * {
+  border: 1px solid black;
+}
+.App > footer,
+.App > header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 12;
+}
+
+.App > aside {
+  grid-column: span 1;
+}
+
+.App > main {
+  grid-column: span 11;
+  overflow: scroll;
+}
