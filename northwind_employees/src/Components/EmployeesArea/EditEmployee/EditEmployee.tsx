@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useHistory, useParams } from "react-router-dom";
 import "./EditEmployee.css";
 import EmployeeModel from "../Model/EmployeeModel";
+import { Button } from "react-bootstrap";
 
 const EditEmployee = (): JSX.Element => {
   const { register, handleSubmit, errors } = useForm();
@@ -39,7 +40,7 @@ const EditEmployee = (): JSX.Element => {
 
   return (
     <div className="EditEmployee">
-      <form onSubmit={handleSubmit(submit)}>
+      <form>
         <div className="main_form_div">
           <div className="item_form_div">
             <label htmlFor="">First Name: </label>
@@ -121,9 +122,15 @@ const EditEmployee = (): JSX.Element => {
             />
             {errors.imageNumber && <span> Image number is required !</span>}
           </div>
-          <button>Submit</button>
+          <Button
+            className="accordion_btn"
+            variant="success"
+            onClick={handleSubmit(submit)}
+          >
+            Submit
+          </Button>
           <Link to="/employees">
-            <button>Back</button>
+            <Button className="accordion_btn">Back</Button>
           </Link>
         </div>
       </form>

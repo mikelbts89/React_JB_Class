@@ -1,7 +1,7 @@
 .employee_Card {
   display: inline-block;
   margin: 1rem;
-  width: 13rem;
+  width: 18rem;
   border: 1px solid grey;
   text-align: left;
   padding: 0.5rem;
@@ -9,3 +9,8 @@
   border-radius: 0.5rem;
   box-shadow: grey 0.5rem 0.5rem 0.5rem;
 }
+
+.accordion_btn {
+  margin-right: 0.5rem;
+}
+
